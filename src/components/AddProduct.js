@@ -77,7 +77,7 @@ const AddProduct = ({ userId }) => {
     }
 
     try {
-      const response = await axios.post('http://ec2-34-229-153-14.compute-1.amazonaws.com:8000/add-product', {
+      const response = await axios.post('http://ec2-35-173-129-197.compute-1.amazonaws.com:8000/add-product', {
         userId,
         productName,
         productUrl,

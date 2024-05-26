@@ -43,7 +43,7 @@ const Login = ({ onLoginSuccess }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://ec2-3-91-191-18.compute-1.amazonaws.com:8000/login', {
+      const response = await axios.post('http://ec2-35-173-129-197.compute-1.amazonaws.com:8000/login', {
         username,
         password,
       });

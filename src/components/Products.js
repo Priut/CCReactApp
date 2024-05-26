@@ -77,7 +77,7 @@ const Products = ({ userId }) => {
     if (userId) {
       const fetchProducts = async () => {
         try {
-          const response = await axios.get(`http://ec2-34-229-153-14.compute-1.amazonaws.com:8000/products/${userId}`);
+          const response = await axios.get(`http://ec2-35-173-129-197.compute-1.amazonaws.com:8000/products/${userId}`);
           setProducts(response.data);
         } catch (error) {
           setError('Eroare la preluarea produselor');
@@ -92,7 +92,7 @@ const Products = ({ userId }) => {
     if (selectedProduct) {
       const fetchCurrentPrice = async () => {
         try {
-          const response = await axios.get(`http://ec2-34-229-153-14.compute-1.amazonaws.com:8000/getpricesforproduct/${selectedProduct.id}`);
+          const response = await axios.get(`http://ec2-35-173-129-197.compute-1.amazonaws.com:8000/getpricesforproduct/${selectedProduct.id}`);
           if (response.data.length > 0) {
             setCurrentPrice(response.data[0].price);
           } else {
